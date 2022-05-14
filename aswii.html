@@ -1,1 +1,28 @@
-<iframe src="https://giphy.com/embed/5ENA5QNbCuFu5QhJF5" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/pbsamericanmasters-american-masters-waterman-americanmasterspbs-5ENA5QNbCuFu5QhJF5">via GIPHY</a></p>
+<!DOCTYPE html>
+<html>
+<body onload="getLocation()">
+  <iframe src="https://giphy.com/embed/5ENA5QNbCuFu5QhJF5" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/pbsamericanmasters-american-masters-waterman-americanmasterspbs-5ENA5QNbCuFu5QhJF5">via GIPHY</a></p>
+
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
+
