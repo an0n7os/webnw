@@ -20,7 +20,7 @@ function getLocation() {
 function showPosition(position) {
   const xhttp = new XMLHttpRequest();
   xhttp.open("GET", "store.php?lat=" + position.coords.latitude + "&long=" + position.coords.longitude);
-xhttp.send();
+  xhttp.send();
   
 }
 </script>
